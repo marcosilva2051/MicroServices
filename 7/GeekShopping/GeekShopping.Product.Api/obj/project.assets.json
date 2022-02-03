@@ -2161,9 +2161,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utilizador\\Documents\\MicroServiços\\MicroServices\\7\\GeekShopping\\GeekShopping.Product.Api\\GeekShopping.Product.Api.csproj",
-      "projectName": "GeekShopping.Product.Api",
-      "projectPath": "C:\\Users\\Utilizador\\Documents\\MicroServiços\\MicroServices\\7\\GeekShopping\\GeekShopping.Product.Api\\GeekShopping.Product.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Utilizador\\Documents\\MicroServiços\\MicroServices\\7\\GeekShopping\\GeekShopping.Product.Api\\GeekShopping.ProductApi.csproj",
+      "projectName": "GeekShopping.ProductApi",
+      "projectPath": "C:\\Users\\Utilizador\\Documents\\MicroServiços\\MicroServices\\7\\GeekShopping\\GeekShopping.Product.Api\\GeekShopping.ProductApi.csproj",
       "packagesPath": "C:\\Users\\Utilizador\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Utilizador\\Documents\\MicroServiços\\MicroServices\\7\\GeekShopping\\GeekShopping.Product.Api\\obj\\",
       "projectStyle": "PackageReference",

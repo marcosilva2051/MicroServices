@@ -36,7 +36,7 @@ namespace RESTApi.Services.Implementations
         public Person FindById(int id)
         {
            return _dbContext.Set<Person>().SingleOrDefault(x => x.Id == id);
-            
+           
         }
 
         public void Update(Person person)

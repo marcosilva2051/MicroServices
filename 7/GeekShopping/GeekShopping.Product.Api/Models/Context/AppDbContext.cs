@@ -14,6 +14,6 @@ namespace GeekShopping.Product.Api.Models.Context
 
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<GeekShopping.ProductApi.Models.Product> Products { get; set; }
     }
 }

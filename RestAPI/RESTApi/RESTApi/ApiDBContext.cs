@@ -9,6 +9,6 @@ namespace RESTApi
         {
 
         }
-        DbSet<Person> Persons { get; set; }
+        public DbSet<Person> Persons { get; set; }
     }
 }

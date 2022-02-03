@@ -1,4 +1,7 @@
+using AutoMapper;
+using GeekShopping.Product.Api.Config;
 using GeekShopping.Product.Api.Models.Context;
+using GeekShopping.Product.Api.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,9 +13,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Mapper
+IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
+builder.Services.AddSingleton(mapper);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+//Entity Framework
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("ProductApiConnection"))
 );
+
+// Serviços de repositorio
+builder.Services.AddScoped<IProductRepository,ProductRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

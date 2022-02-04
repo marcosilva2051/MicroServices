@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "5e75ab91-bb0e-4e23-8272-65b3ccc30bc4": {
+      "ProjectGuid": "5e75ab91-bb0e-4e23-8272-65b3ccc30bc4",
+      "DisplayName": "GeekShopping.Web",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

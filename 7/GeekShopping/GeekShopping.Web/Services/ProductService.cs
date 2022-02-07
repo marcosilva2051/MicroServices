@@ -6,7 +6,12 @@ namespace GeekShopping.Web.Services
     public class ProductService : IProductService
     {
         private readonly HttpClient _httpClient;
-        private const string baseUrl = "api/v1/product";
+        private const string baseUrl = "product";
+
+        public ProductService(HttpClient httpClient)
+        {
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+        }
         public async Task<IEnumerable<ProductModel>> FindAllProducts()
         {
             var response = await _httpClient.GetAsync(baseUrl);
@@ -38,7 +43,7 @@ namespace GeekShopping.Web.Services
         
         public async Task<ProductModel> UpdateProduct(ProductModel product)
         {
-            var response = await _httpClient.PustAsJson<ProductModel>(baseUrl, product);
+            var response = await _httpClient.PutAsJsonAsync<ProductModel>(baseUrl, product);
 
             return await response.ReadContentAs<ProductModel>();
         }

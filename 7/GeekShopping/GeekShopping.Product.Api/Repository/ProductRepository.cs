@@ -58,12 +58,15 @@ namespace GeekShopping.Product.Api.Repository
             return _mapper.Map<ProductVO>(product);
         }
 
-        public Task<ProductVO> Update(ProductVO product)
+        public async Task<ProductVO> Update(ProductVO product)
         {
             var prod = _mapper.Map<GeekShopping.ProductApi.Models.Product>(product);
             _repository.Products.Update(prod);
 
-            throw new NotImplementedException();
+            await _repository.SaveChangesAsync();
+
+            return product;
+
         }
     }
 }
